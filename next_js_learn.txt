@@ -19,3 +19,5 @@ Next js: Learn
 
 iniciar proyecto en modo programador pnpm dev
 general claves random  https://generate-secret.vercel.app/32
+
+falla de auth no puede conectarse a la dase de datos

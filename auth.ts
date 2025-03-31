@@ -6,13 +6,15 @@ import type { User } from '@/app/lib/definitions';
 import bcrypt from 'bcrypt';
 import { sql } from '@vercel/postgres';
 
-console.log(process.env.POSTGRES_URL)
-const sqL = sql(process.env.POSTGRES_URL!, { ssl: 'require' });
+
+
+const sqlAuth = sql(process.env.POSTGRES_URL, { ssl: 'require' });
+
 
  
 async function getUser(email: string): Promise<User | undefined> {
   try {
-    const user = await sqL<User[]>`SELECT * FROM users WHERE email=${email}`;
+    const user = await sqlAuth<User[]>`SELECT * FROM users WHERE email=${email}`;
     return user[0];
   } catch (error) {
     console.error('Failed to fetch user:', error);
