@@ -1,3 +1,5 @@
+// Este objeto contendrá las opciones de configuración de NextAuth.js.
+
 import type { NextAuthConfig } from 'next-auth';
  
 export const authConfig = {

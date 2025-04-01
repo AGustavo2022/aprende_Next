@@ -1,3 +1,6 @@
+// lógica para proteger tus rutas. Esto impedirá que los usuarios accedan a las páginas 
+// del panel a menos que hayan iniciado sesión.
+
 import NextAuth from 'next-auth';
 import { authConfig } from './auth.config';
  
